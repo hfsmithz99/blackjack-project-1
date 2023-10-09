@@ -65,15 +65,15 @@ main {
 }
 
 #bet-pool{
-    grid-column-start: colThirteen;
-    grid-column-end: colFourteen;
+    grid-column-start: colTwelve;
+    grid-column-end: colThirteen;
     grid-row-start: rowSeven;
     grid-row-end: rowEight;
 }
 
 #player-bank{
-    grid-column-start: colThirteen;
-    grid-column-end: colFourteen; 
+    grid-column-start: colTwelve;
+    grid-column-end: colThirteen; 
     grid-row-start: rowNine;
     grid-row-end: rowTen;
 }
@@ -101,9 +101,21 @@ header {
 
 #alert {
     grid-column-start: colEleven;
-    grid-column-end: colFourteen;
+    grid-column-end: colThirteen;
     grid-row-start: rowEight;
     grid-row-end: rowNine;
 }
 
+#computer-card-values {
+    grid-column-start: colTwelve;
+    grid-column-end: colThirteen;
+    grid-row-start: rowOne;
+    grid-row-end: rowTwo;
+}
+#player-card-values {
+    grid-column-start: colFive;
+    grid-column-end: colSix;
+    grid-row-start: rowTen;
+    grid-row-end: rowEleven;
+}
 

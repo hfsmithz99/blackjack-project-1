@@ -5,7 +5,8 @@
 
 //--------State Variables-------------
 //cards in hand
-let handCards;
+let playerHandCards;
+let compueterHandCards;
 //wins and losses of hands
 let wins;
 let losses;
@@ -21,33 +22,41 @@ let ranks;
 
 let originalDeck;
 
+let winTF;
+let continueTF;
+
 
 //--------Cached DOM Elements---------
 //cache the buttons
     //play again
 const playAgainBtn = document.querySelector('#play-again');
     //bet 1 or 5
-const betOneBtn = document.querySelector('#bet-one');
-const betThreeBtn = document.querySelector('#bet-three');
 const placeBetBtn = document.querySelector('#place-bet')
-    //stand
+ const betOneBtn = document.querySelector('#bet-one');
+const betThreeBtn = document.querySelector('#bet-three');
+ //stand
 const standBtn = document.querySelector('#stand');
-    //hit
+//hit
 const hitBtn = document.querySelector('#hit');
 //cache the elements of DOM that need to be updated by render()
     //amount bet
     //cards in hand
-const alertEl = document.querySelector('#alert');
+
+ const alertEl = document.querySelector('#alert');
 const winsLossEl = document.querySelector('#wins-losses');
-const 
+const playerBankEl = document.querySelector('#player-bank');
+const rulesBoxEl = document.querySelector('#rules-box');
+const betPoolEl = document.querySelector('#bet-pool');
+const playerHandValEl = document.querySelector('#player-card-values')
+const computerHandValEl = document.querySelector('#computer-card-values')
 
 //--------event listeners-------------
 document.querySelector('#play-again').addEventListener('click', init)
 document.querySelector('#place-bet').addEventListener('click', placeBet)
-document.querySelector('#hit').addEventListener('click', init)
-document.querySelector('#stand').addEventListener('click', init)
 document.querySelector('#bet-one').addEventListener('click', increaseBetOne)
 document.querySelector('#bet-three').addEventListener('click', increaseBetThree)
+document.querySelector('#stand').addEventListener('click', stand)
+document.querySelector('#hit').addEventListener('click', playerHit)
 document.querySelector('#next-hand').addEventListener('click', init)
 
 //--------Initialize the Game---------
@@ -62,6 +71,9 @@ function init(){
     losses = 0;
     playerBank = 10;
     shuffledDeck = getNewShuffle();
+    playerHandCards = deal()
+    compueterHandCards = deal();
+    continueTF = true;
     render();
 };
 
@@ -91,14 +103,18 @@ function getNewShuffle(){
     return newShuffled;
 }
 
+
 function placeBet(){
     let checkBet = amountBet;
     if(checkBet > playerBank){
-        alertEl.innerText('Bet is too high! Please bet lower!')
+        alertEl.innerText = 'Bet is too high! Please bet lower!'
         amountBet = 0;
-    }
+    } else return true;
+
 }
 
+//INCREASE BET FUNCTIONS
+//
 function increaseBetOne(){
     amountBet += 1;
     console.log(amountBet)
@@ -111,19 +127,78 @@ function increaseBetThree(){
     render();
 }
 
-//write function for if the player hits or stands
-function hit(){
 
+//calling hits the players hand
+function playerHit(){
+    let randomIndexForDeal = Math.floor(Math.random() * shuffledDeck.length);
+    playerHandCards.push(shuffledDeck.splice(randomIndexForDeal, 1)[0]);
+    render();
+}
+
+//calling hits the computer hand
+function computerHit() {
+    let randomIndexForDeal = Math.floor(Math.random() * shuffledDeck.length);
+    compueterHandCards.push(shuffledDeck.splice(randomIndexForDeal, 1)[0]);
+    console.log(compueterHandCards);
+    render()
 }
 
 function stand(){
-
+    while(sumValueCards(compueterHandCards) <= 16){
+        computerHit();
+    }
+    continueTF = false;
+    if(sumValueCards(playerHandCards) > 21){
+        winTF = false;
+      console.log('isworking')
+    } else if (sumValueCards(playerHandCards) > sumValueCards(compueterHandCards)){
+        winTF = true;
+        console.log('isworking')
+    } else if (sumValueCards(playerHandCards) === sumValueCards(compueterHandCards)){
+        winTF = false;
+        console.log('isworking')
+    } else winTF = false;
+    console.log(continueTF)    
+    console.log(winTF) 
+    render();
 }
+
+function sumValueCards(arr){
+    let sumOfCardValue = 0;
+    for(i=0; i<arr.length; i++){
+        sumOfCardValue += arr[i].value;
+    }
+
+    return sumOfCardValue;
+}
+
+function deal(){
+    let twoCards = [];
+    for(i=0; i < 2; i++){
+        let randomIndexForDeal = Math.floor(Math.random() * shuffledDeck.length);
+        twoCards.push(shuffledDeck.splice(randomIndexForDeal, 1)[0]);
+    }
+    return twoCards;
+}
+
 //render function
     //will need to update the cards on the table and the amount bet
 function render(){
-    document.querySelector('#player-bank').innerText = playerBank;
-    document.querySelector('#bet-pool').innerText = amountBet;
+    playerBankEl.innerText = playerBank;
+    betPoolEl.innerText = amountBet;
+    playerHandValEl.innerText = sumValueCards(playerHandCards);
+    computerHandValEl.innerText = sumValueCards(compueterHandCards);
+    alertEl.innerText = ''
+
+    if((continueTF === false) && (winTF === true)){
+        alertEl.innerText = "You win this hand! Time to play the next!";
+        playerBank += amountBet;
+        amountBet = 0;
+    } else if ((continueTF === false) && (winTF === false)){
+        alertEl.innerText = "You lost this hand.... Time to play the next!";
+        amountBet = 0;
+    } else return;
+
 }
 //--------Code Explanation-----------
 
