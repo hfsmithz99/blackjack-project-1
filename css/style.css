@@ -1,10 +1,14 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+
 * {
     box-sizing: border-box;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 body{
-    background-color: lightgreen;
+    background-color: #2a5200;
 }
 
 
@@ -16,80 +20,162 @@ main {
 }
 
 #play-again{
+    font-family: 'Rye';
     grid-column-start: colOne;
     grid-column-end: colTwo;
     grid-row-start: rowEight;
     grid-row-end: rowNine;
+    border: 3px solid black;
+    background-color: #6e0000;
+    color: white;
+    font-size: 20px;
 }
 
 #hit {
+    font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
     grid-row-start: rowSeven;
     grid-row-end: rowEight;
+    border: 3px solid black;
+    background-color: #6e0000;
+    color: white;
+    font-size: 20px;
 }
 
 #stand {
+    font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
     grid-row-start: rowEight;
     grid-row-end: rowNine;
+    border: 3px solid black;
+    background-color: #6e0000;
+    color: white;
+    font-size: 20px;
 }
 
 #bet-one{
+    font-family: 'Rye';
     grid-column-start: colTen;
     grid-column-end: colEleven;
     grid-row-start: rowEight;
     grid-row-end: rowNine;
+    border: 3px solid black;
+    background-color: #6e0000;
+    color: white;
+    font-size: 20px;
 }
 
 #bet-three{
+    font-family: 'Rye';
     grid-column-start: colTen;
     grid-column-end: colEleven;
     grid-row-start: rowNine;
     grid-row-end: rowTen;
+    border: 3px solid black;
+    background-color: #6e0000;
+    color: white;
+    font-size: 20px;
 }
 
 #place-bet {
+    font-family: 'Rye';
     grid-column-start: colThree;
     grid-column-end: colFour;
     grid-row-start: rowSeven;
     grid-row-end: rowEight;
+    border: 3px solid black;
+    background-color: #6e0000;
+    color: white;
+    font-size: 20px;
 }
 
 #next-hand{
+    font-family: 'Rye';
     grid-column-start: colThree;
     grid-column-end: colFour;
     grid-row-start: rowEight;
     grid-row-end: rowNine;
+    border: 3px solid black;
+    background-color: #6e0000;
+    color: white;
+    font-size: 20px;
 }
 
 #bet-pool{
+    font-family: 'Rye';
     grid-column-start: colEleven;
     grid-column-end: colTwelve;
     grid-row-start: rowSix;
     grid-row-end: rowSeven;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bpool-title {
+    font-family: 'Rye';
+    grid-column-start: colTen;
+    grid-column-end: colEleven; 
+    grid-row-start: rowSix;
+    grid-row-end: rowSeven;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #player-bank{
     grid-column-start: colEleven;
     grid-column-end: colTwelve; 
+    grid-row-start: rowNine;
+    grid-row-end: rowTen;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pbank-title {
+    font-family: 'Rye';
+    grid-column-start: colEleven;
+    grid-column-end: colTwelve; 
     grid-row-start: rowEight;
     grid-row-end: rowNine;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #rules-box{
+    font-family: 'Rye';
     grid-column-start: colOne;
     grid-column-end: span colFive;
     grid-row-start: rowTwo;
     grid-row-end: rowSix;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
+    font-family: 'Rye';
     grid-column-start: colOne;
-    grid-column-end: colTwo; 
+    grid-column-end: colThree; 
     grid-row-start: rowOne;
     grid-row-end: rowTwo;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #alert {
@@ -100,16 +186,53 @@ header {
 }
 
 #computer-card-values {
+    font-family: 'Rye';
     grid-column-start: colEleven;
     grid-column-end: colTwelve;
     grid-row-start: rowOne;
     grid-row-end: rowTwo;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#c-value{
+    font-family: 'Rye';
+    grid-column-start: colTen;
+    grid-column-end: colEleven;
+    grid-row-start: rowOne;
+    grid-row-end: rowTwo;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #player-card-values {
+    font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
     grid-row-start: rowNine;
     grid-row-end: rowTen;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#p-value{
+    font-family: 'Rye';
+    grid-column-start: colThree;
+    grid-column-end: colFour;
+    grid-row-start: rowNine;
+    grid-row-end: rowTen;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #computer-cards{

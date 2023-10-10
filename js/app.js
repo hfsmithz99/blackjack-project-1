@@ -56,7 +56,7 @@ document.querySelector('#bet-one').addEventListener('click', increaseBetOne)
 document.querySelector('#bet-three').addEventListener('click', increaseBetThree)
 document.querySelector('#stand').addEventListener('click', stand)
 document.querySelector('#hit').addEventListener('click', playerHit)
-document.querySelector('#next-hand').addEventListener('click', init)
+document.querySelector('#next-hand').addEventListener('click', nextHand)
 
 //--------Initialize the Game---------
 init();
@@ -164,6 +164,9 @@ function stand(){
     } else winTF = false;
     console.log(continueTF)    
     console.log(winTF) 
+    if (winTF = true){
+        playerBank += (amountBet*2);
+    } else amountBet = 0;
     render();
 }
 
@@ -202,6 +205,14 @@ function renderPlayerCardsInContainer(deck, container){
         cardsHTML += `<div id="player-cards" class="card ${card.face}"></div>`;
     })
     container.innerHTML = cardsHTML;
+}
+
+function nextHand(){
+    playerHandCards = deal()
+    compueterHandCards = deal();
+    continueTF = true;
+
+    render();
 }
 
 //render function
