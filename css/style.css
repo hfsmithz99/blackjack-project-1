@@ -11,8 +11,8 @@ body{
 main {
     border: 1px solid red;
     display: grid;
-    grid-template-columns:[colOne] 100px [colTwo] 100px [colThree] 100px [colFour] 100px [colFive] 100px [colSix] 100px [colSeven] 100px [colEight] 100px [colNine] 100px [colTen] 100px [colEleven] 100px [colTwelve] 100px [colThirteen];
-    grid-template-rows: [rowOne] 100px [rowTwo] 100px [rowThree] 100px [rowFour] 100px [rowFive] 100px [rowSix] 100px [rowSeven] 100px [rowEight] 100px [rowNine] 100px [rowTen] 100px [rowEleven];
+    grid-template-columns:[colOne] 100px [colTwo] 100px [colThree] 100px [colFour] 100px [colFive] 100px [colSix] 100px [colSeven] 100px [colEight] 100px [colNine] 100px [colTen] 100px [colEleven] 100px [colTwelve];
+    grid-template-rows: [rowOne] 100px [rowTwo] 100px [rowThree] 100px [rowFour] 100px [rowFive] 100px [rowSix] 100px [rowSeven] 100px [rowEight] 100px [rowNine] 100px [rowTen]
 }
 
 #play-again{
@@ -23,73 +23,66 @@ main {
 }
 
 #hit {
-    grid-column-start: colFive;
-    grid-column-end: colSix;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
-}
-
-#stand {
-    grid-column-start: colFive;
-    grid-column-end: colSix;
-    grid-row-start: rowNine;
-    grid-row-end: rowTen;
-}
-
-#bet-one{
-    grid-column-start: colEleven;
-    grid-column-end: colTwelve;
-    grid-row-start: rowNine;
-    grid-row-end: rowTen;
-}
-
-#bet-three{
-    grid-column-start: colEleven;
-    grid-column-end: colTwelve;
-    grid-row-start: rowTen;
-    grid-row-end: rowEleven;
-}
-
-#place-bet {
     grid-column-start: colFour;
     grid-column-end: colFive;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
-}
-
-#next-hand{
-    grid-column-start: colFour;
-    grid-column-end: colFive;
-    grid-row-start: rowNine;
-    grid-row-end: rowTen;
-}
-
-#bet-pool{
-    grid-column-start: colTwelve;
-    grid-column-end: colThirteen;
     grid-row-start: rowSeven;
     grid-row-end: rowEight;
 }
 
-#player-bank{
-    grid-column-start: colTwelve;
-    grid-column-end: colThirteen; 
+#stand {
+    grid-column-start: colFour;
+    grid-column-end: colFive;
+    grid-row-start: rowEight;
+    grid-row-end: rowNine;
+}
+
+#bet-one{
+    grid-column-start: colTen;
+    grid-column-end: colEleven;
+    grid-row-start: rowEight;
+    grid-row-end: rowNine;
+}
+
+#bet-three{
+    grid-column-start: colTen;
+    grid-column-end: colEleven;
     grid-row-start: rowNine;
     grid-row-end: rowTen;
+}
+
+#place-bet {
+    grid-column-start: colThree;
+    grid-column-end: colFour;
+    grid-row-start: rowSeven;
+    grid-row-end: rowEight;
+}
+
+#next-hand{
+    grid-column-start: colThree;
+    grid-column-end: colFour;
+    grid-row-start: rowEight;
+    grid-row-end: rowNine;
+}
+
+#bet-pool{
+    grid-column-start: colEleven;
+    grid-column-end: colTwelve;
+    grid-row-start: rowSix;
+    grid-row-end: rowSeven;
+}
+
+#player-bank{
+    grid-column-start: colEleven;
+    grid-column-end: colTwelve; 
+    grid-row-start: rowEight;
+    grid-row-end: rowNine;
 }
 
 #rules-box{
     grid-column-start: colOne;
     grid-column-end: span colFive;
     grid-row-start: rowTwo;
-    grid-row-end: rowFour;
-}
-
-#wins-losses{
-    grid-column-start: colOne;
-    grid-column-end: colTwo; 
-    grid-row-start: rowTen;
-    grid-row-end: rowEleven;
+    grid-row-end: rowSix;
 }
 
 header {
@@ -100,22 +93,36 @@ header {
 }
 
 #alert {
-    grid-column-start: colEleven;
-    grid-column-end: colThirteen;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-column-start: colTen;
+    grid-column-end: colTwelve;
+    grid-row-start: rowSeven;
+    grid-row-end: rowEight;
 }
 
 #computer-card-values {
-    grid-column-start: colTwelve;
-    grid-column-end: colThirteen;
+    grid-column-start: colEleven;
+    grid-column-end: colTwelve;
     grid-row-start: rowOne;
     grid-row-end: rowTwo;
 }
 #player-card-values {
+    grid-column-start: colFour;
+    grid-column-end: colFive;
+    grid-row-start: rowNine;
+    grid-row-end: rowTen;
+}
+
+#computer-cards{
     grid-column-start: colFive;
-    grid-column-end: colSix;
-    grid-row-start: rowTen;
-    grid-row-end: rowEleven;
+    grid-column-end: colTen;
+    grid-row-start: rowOne;
+    grid-row-end: rowFive;
+}
+
+#player-cards {
+    grid-column-start: colFive;
+    grid-column-end: colTen;
+    grid-row-start: rowSix;
+    grid-row-end: rowTen;
 }
 

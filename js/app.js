@@ -7,9 +7,6 @@
 //cards in hand
 let playerHandCards;
 let compueterHandCards;
-//wins and losses of hands
-let wins;
-let losses;
 //players money pot
 let playerBank;
 //amount for bet
@@ -43,12 +40,14 @@ const hitBtn = document.querySelector('#hit');
     //cards in hand
 
  const alertEl = document.querySelector('#alert');
-const winsLossEl = document.querySelector('#wins-losses');
 const playerBankEl = document.querySelector('#player-bank');
 const rulesBoxEl = document.querySelector('#rules-box');
 const betPoolEl = document.querySelector('#bet-pool');
 const playerHandValEl = document.querySelector('#player-card-values')
 const computerHandValEl = document.querySelector('#computer-card-values')
+
+const computerContainerEl = document.querySelector('#computer-cards');
+const playerContainerEl = document.querySelector('#player-cards');
 
 //--------event listeners-------------
 document.querySelector('#play-again').addEventListener('click', init)
@@ -113,16 +112,19 @@ function placeBet(){
 
 }
 
+
 //INCREASE BET FUNCTIONS
 //
 function increaseBetOne(){
     amountBet += 1;
+    playerBank -= 1;
     console.log(amountBet)
     render();
 }
 
 function increaseBetThree(){
     amountBet += 3;
+    playerBank -= 3;
     console.log(amountBet)
     render();
 }
@@ -157,6 +159,8 @@ function stand(){
     } else if (sumValueCards(playerHandCards) === sumValueCards(compueterHandCards)){
         winTF = false;
         console.log('isworking')
+    } else if (sumValueCards(compueterHandCards) > 21){
+        winTF = true;
     } else winTF = false;
     console.log(continueTF)    
     console.log(winTF) 
@@ -181,6 +185,25 @@ function deal(){
     return twoCards;
 }
 
+
+function renderCompCardsInContainer(deck, container){
+    container.innerHTML = '';
+    let cardsHTML = '';
+    deck.forEach(function(card){
+        cardsHTML += `<div id="computer-cards" class="card ${card.face}"></div>`;
+    })
+    container.innerHTML = cardsHTML;
+}
+
+function renderPlayerCardsInContainer(deck, container){
+    container.innerHTML = '';
+    let cardsHTML = '';
+    deck.forEach(function(card){
+        cardsHTML += `<div id="player-cards" class="card ${card.face}"></div>`;
+    })
+    container.innerHTML = cardsHTML;
+}
+
 //render function
     //will need to update the cards on the table and the amount bet
 function render(){
@@ -189,6 +212,8 @@ function render(){
     playerHandValEl.innerText = sumValueCards(playerHandCards);
     computerHandValEl.innerText = sumValueCards(compueterHandCards);
     alertEl.innerText = ''
+    renderCompCardsInContainer(compueterHandCards, computerContainerEl);
+    renderPlayerCardsInContainer(playerHandCards, playerContainerEl);
 
     if((continueTF === false) && (winTF === true)){
         alertEl.innerText = "You win this hand! Time to play the next!";
