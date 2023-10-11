@@ -8,7 +8,8 @@
 }
 
 body{
-    background-color: #2a5200;
+    background-image: url('https://i.imgur.com/ntLf0mf.jpg');
+    background-size: 1500px;
 }
 
 
@@ -23,92 +24,99 @@ main {
     font-family: 'Rye';
     grid-column-start: colOne;
     grid-column-end: colTwo;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-row-start: rowSeven;
+    grid-row-end: rowEight;
     border: 3px solid black;
-    background-color: #6e0000;
+    background-color: #a10000;
     color: white;
     font-size: 20px;
+    margin: 3px;
 }
 
 #hit {
     font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
-    grid-row-start: rowSeven;
-    grid-row-end: rowEight;
+    grid-row-start: rowSix;
+    grid-row-end: rowSeven;
     border: 3px solid black;
-    background-color: #6e0000;
+    background-color: #a10000;
     color: white;
     font-size: 20px;
+    margin: 3px;
 }
 
 #stand {
     font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-row-start: rowSeven;
+    grid-row-end: rowEight;
     border: 3px solid black;
-    background-color: #6e0000;
+    background-color: #a10000;
     color: white;
     font-size: 20px;
+    margin: 3px;
 }
 
 #bet-one{
     font-family: 'Rye';
     grid-column-start: colTen;
     grid-column-end: colEleven;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-row-start: rowSeven;
+    grid-row-end: rowEight;
     border: 3px solid black;
-    background-color: #6e0000;
+    background-color: #a10000;
     color: white;
     font-size: 20px;
+    margin: 3px;
 }
 
 #bet-three{
     font-family: 'Rye';
     grid-column-start: colTen;
     grid-column-end: colEleven;
-    grid-row-start: rowNine;
-    grid-row-end: rowTen;
+    grid-row-start: rowEight;
+    grid-row-end: rowNine;
     border: 3px solid black;
-    background-color: #6e0000;
+    background-color: #a10000;
     color: white;
     font-size: 20px;
+    margin: 3px;
 }
 
 #place-bet {
     font-family: 'Rye';
     grid-column-start: colThree;
     grid-column-end: colFour;
-    grid-row-start: rowSeven;
-    grid-row-end: rowEight;
+    grid-row-start: rowSix;
+    grid-row-end: rowSeven;
     border: 3px solid black;
-    background-color: #6e0000;
+    background-color: #a10000;
     color: white;
     font-size: 20px;
+    margin: 3px;
 }
 
 #next-hand{
     font-family: 'Rye';
     grid-column-start: colThree;
     grid-column-end: colFour;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-row-start: rowSeven;
+    grid-row-end: rowEight;
     border: 3px solid black;
-    background-color: #6e0000;
+    background-color: #a10000;
     color: white;
     font-size: 20px;
+    margin: 3px;
 }
 
 #bet-pool{
     font-family: 'Rye';
     grid-column-start: colEleven;
     grid-column-end: colTwelve;
-    grid-row-start: rowSix;
-    grid-row-end: rowSeven;
+    grid-row-start: rowFive;
+    grid-row-end: rowSix;
     font-size: 30px;
     color: white;
     display: flex;
@@ -119,8 +127,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colTen;
     grid-column-end: colEleven; 
-    grid-row-start: rowSix;
-    grid-row-end: rowSeven;
+    grid-row-start: rowFive;
+    grid-row-end: rowSix;
     font-size: 30px;
     color: white;
     display: flex;
@@ -131,8 +139,8 @@ main {
 #player-bank{
     grid-column-start: colEleven;
     grid-column-end: colTwelve; 
-    grid-row-start: rowNine;
-    grid-row-end: rowTen;
+    grid-row-start: rowEight;
+    grid-row-end: rowNine;
     font-size: 30px;
     color: white;
     display: flex;
@@ -144,8 +152,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colEleven;
     grid-column-end: colTwelve; 
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-row-start: rowSeven;
+    grid-row-end: rowEight;
     font-size: 30px;
     color: white;
     display: flex;
@@ -179,10 +187,16 @@ header {
 }
 
 #alert {
+    font-family: 'Rye';
     grid-column-start: colTen;
     grid-column-end: colTwelve;
-    grid-row-start: rowSeven;
-    grid-row-end: rowEight;
+    grid-row-start: rowSix;
+    grid-row-end: rowSeven;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
 }
 
 #computer-card-values {
@@ -214,8 +228,8 @@ header {
     font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
-    grid-row-start: rowNine;
-    grid-row-end: rowTen;
+    grid-row-start: rowEight;
+    grid-row-end: rowNine;
     font-size: 40px;
     color: white;
     display: flex;
@@ -227,8 +241,8 @@ header {
     font-family: 'Rye';
     grid-column-start: colThree;
     grid-column-end: colFour;
-    grid-row-start: rowNine;
-    grid-row-end: rowTen;
+    grid-row-start: rowEight;
+    grid-row-end: rowNine;
     color: white;
     display: flex;
     align-items: center;
@@ -236,16 +250,16 @@ header {
 }
 
 #computer-cards{
-    grid-column-start: colFive;
+    grid-column-start: colSix;
     grid-column-end: colTen;
     grid-row-start: rowOne;
     grid-row-end: rowFive;
 }
 
 #player-cards {
-    grid-column-start: colFive;
+    grid-column-start: colSix;
     grid-column-end: colTen;
-    grid-row-start: rowSix;
+    grid-row-start: rowSeven;
     grid-row-end: rowTen;
 }
 

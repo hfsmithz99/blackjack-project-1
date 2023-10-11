@@ -134,6 +134,7 @@ function increaseBetThree(){
 function playerHit(){
     let randomIndexForDeal = Math.floor(Math.random() * shuffledDeck.length);
     playerHandCards.push(shuffledDeck.splice(randomIndexForDeal, 1)[0]);
+    console.log(playerHandCards)
     render();
 }
 
@@ -181,9 +182,13 @@ function sumValueCards(arr){
 
 function deal(){
     let twoCards = [];
+    if(shuffledDeck.length === 0){
+        shuffledDeck = getNewShuffle();
+    } else {
     for(i=0; i < 2; i++){
         let randomIndexForDeal = Math.floor(Math.random() * shuffledDeck.length);
         twoCards.push(shuffledDeck.splice(randomIndexForDeal, 1)[0]);
+    }
     }
     return twoCards;
 }
@@ -217,6 +222,7 @@ function nextHand(){
 
 //render function
     //will need to update the cards on the table and the amount bet
+    //move win condition to seperate function
 function render(){
     playerBankEl.innerText = playerBank;
     betPoolEl.innerText = amountBet;
