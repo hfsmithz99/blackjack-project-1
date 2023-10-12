@@ -68,13 +68,15 @@ function init(){
     amountBet = 0;
     wins = 0;
     losses = 0;
-    playerBank = 10;
+    playerBank = 1000;
     shuffledDeck = getNewShuffle();
     playerHandCards = deal()
     compueterHandCards = deal();
     render();
 };
 
+
+//this functions, when called, will build a 52 card deck in order and return it
 function buildOriginalDeck(){
     const deck = [];
     suits.forEach(function(suit){
@@ -88,6 +90,8 @@ function buildOriginalDeck(){
     return deck;
 };
 
+
+//this function, when called, will create a shuffled copy of the original deck and then return it
 function getNewShuffle(){
     const temporaryDeck = [...originalDeck];
     const newShuffled = [];
@@ -101,7 +105,7 @@ function getNewShuffle(){
     return newShuffled;
 }
 
-
+//this function, when called
 function placeBet(){
     let checkBet = amountBet;
     if(checkBet > playerBank){
@@ -115,15 +119,15 @@ function placeBet(){
 //INCREASE BET FUNCTIONS
 //
 function increaseBetOne(){
-    amountBet += 1;
-    playerBank -= 1;
+    amountBet += 100;
+    playerBank -= 100;
     console.log(amountBet)
     render();
 }
 
 function increaseBetThree(){
-    amountBet += 3;
-    playerBank -= 3;
+    amountBet += 300;
+    playerBank -= 300;
     console.log(amountBet)
     render();
 }
@@ -191,7 +195,6 @@ function renderPlayerCardsInContainer(deck, container){
 function nextHand(){
     playerHandCards = deal()
     compueterHandCards = deal();
-    continueTF = true;
 
     render();
 }
@@ -204,15 +207,23 @@ function stand(){
     
     winTF = checkWin();
     console.log(winTF) 
-    if (winTF = true){
-        playerBank += (amountBet*2);
-    } else amountBet = 0;
-    render();
+    if(winTF === false){
+        alertEl.innerText = "You lost this hand.... Time to play the next!";
+        amountBet = 0;
+    } else if (winTF === true){
+        alertEl.innerText = "You win this hand! Time to play the next!";
+        playerBank += amountBet*2;
+        amountBet = 0;   
+    } else return;
+
+    winTF = undefined;
+
 }
 
 function checkWin(){
     if(sumValueCards(playerHandCards) <= 21){
         if(sumValueCards(playerHandCards) === sumValueCards(compueterHandCards)){
+            console.log(winTF)
             return false;
         } else if ((sumValueCards(playerHandCards) < sumValueCards(compueterHandCards))&&(sumValueCards(compueterHandCards) <= 21)){
             return false;
@@ -220,10 +231,15 @@ function checkWin(){
     } else return false;
 }
 
+/*function checkWin(){
+    if(sumValueCards(compueterHandCards))
+}*/
+
 //render function
     //will need to update the cards on the table and the amount bet
     //move win condition to seperate function
 function render(){
+
     playerBankEl.innerText = playerBank;
     betPoolEl.innerText = amountBet;
     playerHandValEl.innerText = sumValueCards(playerHandCards);
@@ -232,17 +248,6 @@ function render(){
     renderCompCardsInContainer(compueterHandCards, computerContainerEl);
     renderPlayerCardsInContainer(playerHandCards, playerContainerEl);
     console.log(winTF);
-    
-    if(winTF === false){
-        alertEl.innerText = "You lost this hand.... Time to play the next!";
-        amountBet = 0;
-    } else if (winTF === true){
-        alertEl.innerText = "You win this hand! Time to play the next!";
-        playerBank += amountBet;
-        amountBet = 0;   
-    } else return;
-
-    winTF = undefined;
 
 }
 //--------Code Explanation-----------

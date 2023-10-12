@@ -17,7 +17,7 @@ main {
     border: 1px solid red;
     display: grid;
     grid-template-columns:[colOne] 100px [colTwo] 100px [colThree] 100px [colFour] 100px [colFive] 100px [colSix] 100px [colSeven] 100px [colEight] 100px [colNine] 100px [colTen] 100px [colEleven] 100px [colTwelve];
-    grid-template-rows: [rowOne] 100px [rowTwo] 100px [rowThree] 100px [rowFour] 100px [rowFive] 100px [rowSix] 100px [rowSeven] 100px [rowEight] 100px [rowNine] 100px [rowTen]
+    grid-template-rows: [rowOne] 100px [rowTwo] 100px [rowThree] 100px [rowFour] 100px [rowFive] 100px [rowSix] 100px [rowSeven] 100px [rowEight] 100px [rowNine] 
 }
 
 #play-again{
@@ -26,10 +26,10 @@ main {
     grid-column-end: colTwo;
     grid-row-start: rowSeven;
     grid-row-end: rowEight;
-    border: 3px solid black;
+    border: 3px solid white;
     background-color: #a10000;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin: 3px;
 }
 
@@ -39,10 +39,10 @@ main {
     grid-column-end: colFive;
     grid-row-start: rowSix;
     grid-row-end: rowSeven;
-    border: 3px solid black;
+    border: 3px solid white;
     background-color: #a10000;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin: 3px;
 }
 
@@ -52,10 +52,10 @@ main {
     grid-column-end: colFive;
     grid-row-start: rowSeven;
     grid-row-end: rowEight;
-    border: 3px solid black;
+    border: 3px solid white;
     background-color: #a10000;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin: 3px;
 }
 
@@ -65,10 +65,10 @@ main {
     grid-column-end: colEleven;
     grid-row-start: rowSeven;
     grid-row-end: rowEight;
-    border: 3px solid black;
+    border: 3px solid white;
     background-color: #a10000;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin: 3px;
 }
 
@@ -78,10 +78,10 @@ main {
     grid-column-end: colEleven;
     grid-row-start: rowEight;
     grid-row-end: rowNine;
-    border: 3px solid black;
+    border: 3px solid white;
     background-color: #a10000;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin: 3px;
 }
 
@@ -91,10 +91,10 @@ main {
     grid-column-end: colFour;
     grid-row-start: rowSix;
     grid-row-end: rowSeven;
-    border: 3px solid black;
+    border: 3px solid white;
     background-color: #a10000;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin: 3px;
 }
 
@@ -104,10 +104,10 @@ main {
     grid-column-end: colFour;
     grid-row-start: rowSeven;
     grid-row-end: rowEight;
-    border: 3px solid black;
+    border: 3px solid white;
     background-color: #a10000;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     margin: 3px;
 }
 
@@ -176,10 +176,10 @@ main {
 header {
     font-family: 'Rye';
     grid-column-start: colOne;
-    grid-column-end: colThree; 
+    grid-column-end: colFive; 
     grid-row-start: rowOne;
     grid-row-end: rowTwo;
-    font-size: 30px;
+    font-size: 50px;
     color: white;
     display: flex;
     align-items: center;
