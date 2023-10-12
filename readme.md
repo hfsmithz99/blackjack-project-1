@@ -9,7 +9,7 @@ For further reading on the rules of Blackjack, visit [bicycle.com](https://bicyc
 
 # Screenshots
 
-developer
+![blackjack board](https://i.imgur.com/MJ6hlTH.png)
 
 # Technologies Used
 
