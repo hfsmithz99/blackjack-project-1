@@ -1,7 +1,3 @@
-//--------Constant Variables----------
-
-//set Constant variables
-//Number of cars in deck
 
 //--------State Variables-------------
 //cards in hand
@@ -21,7 +17,6 @@ let originalDeck;
 
 let winTF;
 let continueTF;
-
 
 //--------Cached DOM Elements---------
 //cache the buttons
@@ -75,7 +70,6 @@ function init(){
     render();
 };
 
-
 //this functions, when called, will build a 52 card deck in order and return it
 function buildOriginalDeck(){
     const deck = [];
@@ -89,7 +83,6 @@ function buildOriginalDeck(){
     });
     return deck;
 };
-
 
 //this function, when called, will create a shuffled copy of the original deck and then return it
 function getNewShuffle(){
@@ -132,7 +125,6 @@ function increaseBetThree(){
     render();
 }
 
-
 //calling hits the players hand
 function playerHit(){
     let randomIndexForDeal = Math.floor(Math.random() * shuffledDeck.length);
@@ -149,14 +141,11 @@ function computerHit() {
     render()
 }
 
-
-
 function sumValueCards(arr){
     let sumOfCardValue = 0;
     for(i=0; i<arr.length; i++){
         sumOfCardValue += arr[i].value;
     }
-
     return sumOfCardValue;
 }
 
@@ -199,7 +188,6 @@ function nextHand(){
     render();
 }
 
-
 function stand(){
     while((sumValueCards(compueterHandCards) <= 16)&&(sumValueCards(compueterHandCards) < sumValueCards(playerHandCards))){
         computerHit();
@@ -230,10 +218,6 @@ function checkWin(){
         } else return true;
     } else return false;
 }
-
-/*function checkWin(){
-    if(sumValueCards(compueterHandCards))
-}*/
 
 //render function
     //will need to update the cards on the table and the amount bet

@@ -34,7 +34,7 @@ Try and keep your bank from reaching zero!
 # Next Steps
 
 1. Add the capacity for a split function
-2. Add a tracked for the number of hands won/lost
+2. Add a tracker for the number of hands won/lost
 
 
 
