@@ -250,9 +250,3 @@ function render(){
     console.log(winTF);
 
 }
-//--------Code Explanation-----------
-
-//1.
-//2.
-//3.
-//4.

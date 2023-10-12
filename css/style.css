@@ -4,7 +4,6 @@
 
 * {
     box-sizing: border-box;
-    /*border: 1px solid red;*/
 }
 
 body{
@@ -14,7 +13,6 @@ body{
 
 
 main {
-    border: 1px solid red;
     display: grid;
     grid-template-columns:[colOne] 100px [colTwo] 100px [colThree] 100px [colFour] 100px [colFive] 100px [colSix] 100px [colSeven] 100px [colEight] 100px [colNine] 100px [colTen] 100px [colEleven] 100px [colTwelve];
     grid-template-rows: [rowOne] 100px [rowTwo] 100px [rowThree] 100px [rowFour] 100px [rowFive] 100px [rowSix] 100px [rowSeven] 100px [rowEight] 100px [rowNine] 
@@ -24,8 +22,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colOne;
     grid-column-end: colTwo;
-    grid-row-start: rowSeven;
-    grid-row-end: rowEight;
+    grid-row-start: rowThree;
+    grid-row-end: rowFour;
     border: 3px solid white;
     background-color: #a10000;
     color: white;
@@ -37,8 +35,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
-    grid-row-start: rowSix;
-    grid-row-end: rowSeven;
+    grid-row-start: rowThree;
+    grid-row-end: rowFour;
     border: 3px solid white;
     background-color: #a10000;
     color: white;
@@ -50,8 +48,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
-    grid-row-start: rowSeven;
-    grid-row-end: rowEight;
+    grid-row-start: rowFour;
+    grid-row-end: rowFive;
     border: 3px solid white;
     background-color: #a10000;
     color: white;
@@ -61,10 +59,10 @@ main {
 
 #bet-one{
     font-family: 'Rye';
-    grid-column-start: colTen;
-    grid-column-end: colEleven;
-    grid-row-start: rowSeven;
-    grid-row-end: rowEight;
+    grid-column-start: colNine;
+    grid-column-end: colTen;
+    grid-row-start: rowThree;
+    grid-row-end: rowFour;
     border: 3px solid white;
     background-color: #a10000;
     color: white;
@@ -74,10 +72,10 @@ main {
 
 #bet-three{
     font-family: 'Rye';
-    grid-column-start: colTen;
-    grid-column-end: colEleven;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-column-start: colNine;
+    grid-column-end: colTen;
+    grid-row-start: rowFour;
+    grid-row-end: rowFive;
     border: 3px solid white;
     background-color: #a10000;
     color: white;
@@ -89,8 +87,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colThree;
     grid-column-end: colFour;
-    grid-row-start: rowSix;
-    grid-row-end: rowSeven;
+    grid-row-start: rowThree;
+    grid-row-end: rowFour;
     border: 3px solid white;
     background-color: #a10000;
     color: white;
@@ -102,8 +100,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colThree;
     grid-column-end: colFour;
-    grid-row-start: rowSeven;
-    grid-row-end: rowEight;
+    grid-row-start: rowFour;
+    grid-row-end: rowFive;
     border: 3px solid white;
     background-color: #a10000;
     color: white;
@@ -115,8 +113,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colEleven;
     grid-column-end: colTwelve;
-    grid-row-start: rowFive;
-    grid-row-end: rowSix;
+    grid-row-start: rowTwo;
+    grid-row-end: rowThree;
     font-size: 30px;
     color: white;
     display: flex;
@@ -127,8 +125,8 @@ main {
     font-family: 'Rye';
     grid-column-start: colTen;
     grid-column-end: colEleven; 
-    grid-row-start: rowFive;
-    grid-row-end: rowSix;
+    grid-row-start: rowTwo;
+    grid-row-end: rowThree;
     font-size: 30px;
     color: white;
     display: flex;
@@ -139,8 +137,8 @@ main {
 #player-bank{
     grid-column-start: colEleven;
     grid-column-end: colTwelve; 
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-row-start: rowThree;
+    grid-row-end: rowFour;
     font-size: 30px;
     color: white;
     display: flex;
@@ -150,10 +148,10 @@ main {
 
 #pbank-title {
     font-family: 'Rye';
-    grid-column-start: colEleven;
-    grid-column-end: colTwelve; 
-    grid-row-start: rowSeven;
-    grid-row-end: rowEight;
+    grid-column-start: colTen;
+    grid-column-end: colEleven; 
+    grid-row-start: rowThree;
+    grid-row-end: rowFour;
     font-size: 30px;
     color: white;
     display: flex;
@@ -161,17 +159,6 @@ main {
     justify-content: center;
 }
 
-#rules-box{
-    font-family: 'Rye';
-    grid-column-start: colOne;
-    grid-column-end: span colFive;
-    grid-row-start: rowTwo;
-    grid-row-end: rowSix;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 header {
     font-family: 'Rye';
@@ -188,10 +175,10 @@ header {
 
 #alert {
     font-family: 'Rye';
-    grid-column-start: colTen;
-    grid-column-end: colTwelve;
-    grid-row-start: rowSix;
-    grid-row-end: rowSeven;
+    grid-column-start: colSix;
+    grid-column-end: colEight;
+    grid-row-start: rowFive;
+    grid-row-end: rowSix;
     color: white;
     display: flex;
     align-items: center;
@@ -228,8 +215,8 @@ header {
     font-family: 'Rye';
     grid-column-start: colFour;
     grid-column-end: colFive;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-row-start: rowFive;
+    grid-row-end: rowSix;
     font-size: 40px;
     color: white;
     display: flex;
@@ -241,8 +228,8 @@ header {
     font-family: 'Rye';
     grid-column-start: colThree;
     grid-column-end: colFour;
-    grid-row-start: rowEight;
-    grid-row-end: rowNine;
+    grid-row-start: rowFive;
+    grid-row-end: rowSix;
     color: white;
     display: flex;
     align-items: center;
@@ -251,15 +238,15 @@ header {
 
 #computer-cards{
     grid-column-start: colSix;
-    grid-column-end: colTen;
+    grid-column-end: colNine;
     grid-row-start: rowOne;
     grid-row-end: rowFive;
 }
 
 #player-cards {
     grid-column-start: colSix;
-    grid-column-end: colTen;
-    grid-row-start: rowSeven;
-    grid-row-end: rowTen;
+    grid-column-end: colNine;
+    grid-row-start: rowThree;
+    grid-row-end: rowFive;
 }
 
