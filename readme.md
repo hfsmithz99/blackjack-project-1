@@ -23,7 +23,7 @@ SVG (Scalable Vector Graphics)
 
 # Getting Started
 
-Please visit [here]() to play the game!
+Please visit [here](https://hfsmithz99.github.io/blackjack-project-1/) to play the game!
 
 The first hand has been dealt for you, bet the amount you would like to wager and decide if you should hit or stand.
 
