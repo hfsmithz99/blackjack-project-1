@@ -23,7 +23,6 @@ let continueTF;
     //play again
 const playAgainBtn = document.querySelector('#play-again');
     //bet 1 or 5
-const placeBetBtn = document.querySelector('#place-bet')
  const betOneBtn = document.querySelector('#bet-one');
 const betThreeBtn = document.querySelector('#bet-three');
  //stand
@@ -46,7 +45,6 @@ const playerContainerEl = document.querySelector('#player-cards');
 
 //--------event listeners-------------
 document.querySelector('#play-again').addEventListener('click', init)
-document.querySelector('#place-bet').addEventListener('click', placeBet)
 document.querySelector('#bet-one').addEventListener('click', increaseBetOne)
 document.querySelector('#bet-three').addEventListener('click', increaseBetThree)
 document.querySelector('#stand').addEventListener('click', stand)
@@ -97,17 +95,6 @@ function getNewShuffle(){
     }
     return newShuffled;
 }
-
-//this function, when called
-function placeBet(){
-    let checkBet = amountBet;
-    if(checkBet > playerBank){
-        alertEl.innerText = 'Bet is too high! Please bet lower!'
-        amountBet = 0;
-    } else return true;
-
-}
-
 
 //INCREASE BET FUNCTIONS
 //
@@ -196,10 +183,10 @@ function stand(){
     winTF = checkWin();
     console.log(winTF) 
     if(winTF === false){
-        alertEl.innerText = "You lost this hand.... Time to play the next!";
+        alertEl.innerText = "You lost this hand.... Time to play the next hand!";
         amountBet = 0;
     } else if (winTF === true){
-        alertEl.innerText = "You win this hand! Time to play the next!";
+        alertEl.innerText = "You win this hand! Time to play the next hand!";
         playerBank += amountBet*2;
         amountBet = 0;   
     } else return;

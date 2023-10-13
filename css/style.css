@@ -83,19 +83,6 @@ main {
     margin: 3px;
 }
 
-#place-bet {
-    font-family: 'Rye';
-    grid-column-start: colThree;
-    grid-column-end: colFour;
-    grid-row-start: rowThree;
-    grid-row-end: rowFour;
-    border: 3px solid white;
-    background-color: #a10000;
-    color: white;
-    font-size: 25px;
-    margin: 3px;
-}
-
 #next-hand{
     font-family: 'Rye';
     grid-column-start: colThree;
